@@ -92,13 +92,7 @@ curl -X GET "localhost:9200/customer/_search?pretty" -H 'Content-Type: applicati
 ```
 
 #### 分词
- ```bash
- curl -X POST "localhost:9200/_analyze" -H 'Content-Type: application/json' -d'
-{  
-    "analyzer": "standard",
-    "text": "世界如此之大"  
-}'
- ```
+ https://github.com/1107012776/elasticsearch-analysis-ik 分词操作
  
 ##### 安装中文分词插件
 https://github.com/medcl/elasticsearch-analysis-ik/
