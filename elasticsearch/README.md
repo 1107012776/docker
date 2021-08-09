@@ -90,3 +90,18 @@ curl -X GET "localhost:9200/customer/_search?pretty" -H 'Content-Type: applicati
  }
  '
 ```
+
+#### 分词
+ ```bash
+ curl -X POST "localhost:9200/_analyze" -H 'Content-Type: application/json' -d'
+{  
+    "analyzer": "standard",
+    "text": "世界如此之大"  
+}'
+ ```
+ 
+##### 安装中文分词插件
+https://github.com/medcl/elasticsearch-analysis-ik/
+```bash
+elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.14.0/elasticsearch-analysis-ik-7.14.0.zip
+```
